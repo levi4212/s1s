@@ -1,0 +1,16 @@
+#!name=IPPure 检测面板
+#!desc=在首页面板显示当前节点的 IP 纯净度、风险分、是否为原生/住宅IP。
+#!author=
+#!category=Network
+#!icon=shield.checkerboard
+
+[Panel]
+# 显示在 Surge 首页的面板
+# 点击面板会自动跳转到 IPPure 网页查看详细信息
+IP纯净度 = script-name=IPPureCheck, update-interval=600, title="IP 纯净度", content="正在刷新...", icon=shield.checkerboard, icon-color=#007AFF
+
+[Script]
+# 脚本定义
+# 请确保 script-path 指向您存放 js 文件的正确地址
+# 如果想使用在线脚本，请替换为 raw github 链接
+IPPureCheck = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/levi4212/s1s/levi/IPPurePanel.js
